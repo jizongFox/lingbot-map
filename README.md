@@ -188,12 +188,12 @@ https://github.com/user-attachments/assets/d350b590-d036-4363-af8c-7af3918338ef
 
 
 
-### Windowed Inference (for long sequences, >3000 frames)
+### Windowed Inference (For use in large-scale scenes, parameters need to be carefully tuned.)
 
 ```bash
 python demo.py --model_path /path/to/lingbot-map-long.pt \
     --video_path video.mp4 --fps 10 \
-    --mode windowed --window_size 128
+    --mode windowed --window_size 128 --overlap_size 64 --keyframe_interval 12
 ```
 
 
