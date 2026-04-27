@@ -79,6 +79,14 @@ FlashInfer provides paged KV cache attention for efficient streaming inference. 
 pip install --index-url https://pypi.org/simple flashinfer-python
 ```
 
+Or try to install from source
+
+```bash
+git clone https://github.com/flashinfer-ai/flashinfer.git --recursive
+cd flashinfer
+python -m pip install -v .
+```
+
 > `--index-url https://pypi.org/simple` is only needed if your default pip index is an internal mirror that doesn't have `flashinfer-python`.
 > (Optional) For faster first-use, you can additionally install a CUDA-specific JIT cache: `pip install flashinfer-jit-cache -f https://flashinfer.ai/whl/cu128/flashinfer-jit-cache/`.
 > See [FlashInfer installation](https://docs.flashinfer.ai/installation.html) for details. If FlashInfer is not installed, the model falls back to SDPA (PyTorch native attention) via `--use_sdpa`.
